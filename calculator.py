@@ -1,10 +1,3 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
-
 # https://github.com/elliehobbs10-dev/lab11-EH-JGC.git
 # Partner 1: Ellie Hobbs
 # Partner 2: Jose Garcia-Cejas
@@ -13,7 +6,7 @@ import math
 def add(a, b): 
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 def mul(a, b):
@@ -25,7 +18,7 @@ def div(a, b):
     else:
         return b / a
 
-def log(a, b):
+def logarithm(a, b):
     if b <= 0:
         raise ValueError
     else:
@@ -45,6 +38,8 @@ def square_root(a):
 def hypotenuse(a, b):
     try:
         return math.hypot(a, b)
+    except TypeError:
+        raise TypeError("Input must be numbers.")
     except TypeError:
         raise TypeError("Input must be numbers.")
 
